@@ -6,4 +6,4 @@ LIF should work up to 2560x1440. After that size, it still should work but you'l
 
 ### File structure
 Example .lif file:
-'''LIF v1 odata:size=2x2,title="hi!" img:00000000ff0000ff00000000'''
+```LIF v1 odata:size=2x2,title="hi!" img:00000000ff0000ff00000000```
