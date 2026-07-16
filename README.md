@@ -30,3 +30,52 @@ All the errors for v1:
 
 ### Quick implemantations
 .PNG/.JPG -> .LIF
+```from PIL import Image
+
+def png_to_lif(png_path, lif_path, title="MyArt", author="Lucas"):
+    img = Image.open(png_path).convert("RGB")
+    width, height = img.size
+    
+    # Fast binary-to-hex conversion
+    pixel_stream = img.tobytes().hex()
+    
+    metadata = f"size={width}x{height},title={title},author={author}"
+    lif_content = f"LIF v1 odata:{metadata} img:{pixel_stream}"
+    
+    with open(lif_path, "w", encoding="utf-8") as f:
+        f.write(lif_content)
+```
+
+.LIF -> .PNG
+```from PIL import Image
+
+def lif_to_png(lif_path, png_path):
+    with open(lif_path, "r", encoding="utf-8") as f:
+        content = f.read().strip()
+        
+    if not content.startswith("LIF v1 odata:"):
+        raise ValueError("Error 03: Missing or malformed LIF v1 header")
+        
+    meta_part, img_part = content.split(" img:")
+    odata_raw = meta_part.replace("LIF v1 odata:", "")
+    
+    # Parse size
+    metadata = dict(item.split("=") for item in odata_raw.split(",") if "=" in item)
+    width, height = map(int, metadata["size"].split("x"))
+    
+    # Error 01 Validation
+    if len(img_part) != width * height * 6:
+        raise ValueError("Error 01: Pixel count mismatch")
+        
+    # Error 02 Validation & Fast Parse
+    try:
+        raw_bytes = bytes.fromhex(img_part)
+    except ValueError:
+        raise ValueError("Error 02: Malformed color characters")
+        
+    # Convert back to standard PNG
+    pixels = list(zip(raw_bytes[0::3], raw_bytes[1::3], raw_bytes[2::3]))
+    img = Image.new("RGB", (width, height))
+    img.putdata(pixels)
+    img.save(png_path)
+```
