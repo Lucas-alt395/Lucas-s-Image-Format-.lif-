@@ -22,3 +22,4 @@ All the errors for v1:
 | Error code | Error message | Triggered by |
 | --- | --- | --- |
 | Error 01 | Pixel count mismatch | Width x Height in odata doesn't match the amount of pixels provided |
+| Error 02 | Malformed color code | An pixel color code isn't formatted like this: 00ff00 (this is not correct: #00FF00) |
