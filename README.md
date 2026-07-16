@@ -27,3 +27,6 @@ All the errors for v1:
 | Error 04 | Unsupported version | Version isn't a version that the parser supports |
 | Error 05 | General error | Anything can go wrong, so i can't help you with this one. |
 | Error 06 | RESERVED FOR FUTURE UPDATE | <- |
+
+### Quick implemantations
+.PNG/.JPG -> .LIF
