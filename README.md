@@ -18,7 +18,7 @@ Sections table:
 | 3 | Other data | It has data like the size (XxY, WidthXHeight) and metadata. | To know the size and other metadata |
 | 4 | Image | It contains the actual image in hex codes without hashtags and no separations | Otherwise you won't have an image, and that's useless. |
 
-All the rules for v1:
-| Rule |
-| --- |
-| test |
+All the errors for v1:
+| Error code | Error message | Triggered by |
+| --- | --- | --- |
+| Error 01 | a | a |
