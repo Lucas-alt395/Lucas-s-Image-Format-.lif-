@@ -21,4 +21,4 @@ Sections table:
 All the errors for v1:
 | Error code | Error message | Triggered by |
 | --- | --- | --- |
-| Error 01 | a | a |
+| Error 01 | Pixel count mismatch | Width x Height in odata doesn't match the amount of pixels provided |
