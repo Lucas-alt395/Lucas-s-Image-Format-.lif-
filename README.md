@@ -24,3 +24,6 @@ All the errors for v1:
 | Error 01 | Pixel count mismatch | Width x Height in odata/Section 3 doesn't match the amount of pixels provided |
 | Error 02 | Malformed color code | An pixel color code isn't formatted like this: 00ff00 (this is not correct: #00FF00) |
 | Error 03 | Missing required field | You're missing Section 1, Section 2, or the version in odata/Section 3 |
+| Error 04 | Unsupported version | Version isn't a version that the parser supports |
+| Error 05 | General error | Anything can go wrong, so i can't help you with this one. |
+| Error 06 | RESERVED FOR FUTURE UPDATE | <- |
