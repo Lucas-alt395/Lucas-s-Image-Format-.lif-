@@ -1,0 +1,1 @@
+LIF v1 clr:hexrgb odata:size=4x3,title=Lucas-Test-Image,author=Lucas,shortdesc=hi! img:ff0000,00ff00,0000ff,000000,fff000,ffffff,ffffff,000000,0000ff,00ff00,ff0000,000000
