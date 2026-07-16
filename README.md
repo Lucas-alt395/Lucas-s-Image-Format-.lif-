@@ -13,4 +13,5 @@ LIF works in diffrent sections seprated by spaces.
 | Section | Name | What does it have | Why do you need it |
 | 1 | LIF name | It only says "LIF" | To verify that this is indeed a .lif file. |
 | 2 | Version number | It says v + a version number, for example v1 | To apply the correct rules |
-| 3 | Other data | It 
+| 3 | Other data | It has data like the size (XxY, WidthXHeight) and metadata. | To know the size and other metadata |
+| 4 | Image | It contains the actual image in hex codes without hashtags and no separations | Otherwise you won't have an image, and that's useless.|
