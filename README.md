@@ -30,7 +30,8 @@ All the errors for v1:
 
 ### Quick implemantations
 .PNG/.JPG -> .LIF
-```from PIL import Image
+```
+from PIL import Image
 
 def png_to_lif(png_path, lif_path, title="MyArt", author="Lucas"):
     img = Image.open(png_path).convert("RGB")
@@ -47,7 +48,8 @@ def png_to_lif(png_path, lif_path, title="MyArt", author="Lucas"):
 ```
 
 .LIF -> .PNG
-```from PIL import Image
+```
+from PIL import Image
 
 def lif_to_png(lif_path, png_path):
     with open(lif_path, "r", encoding="utf-8") as f:
