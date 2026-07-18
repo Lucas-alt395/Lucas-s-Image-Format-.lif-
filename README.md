@@ -1,5 +1,5 @@
 # Lucas's Image Format (.limgf and .lif)
-## WARNING: LIF uses both .limgf and .lif. .limgf is recommended.
+## WARNING: LIF uses .limgf mainly. .lif is not recommended.
 LIF is an "binary" file format. (I say "binary" because officially it is binary but you can still view it in a text editor since it's basic text.)
 
 All LIF code in this documentation is written in Python.
